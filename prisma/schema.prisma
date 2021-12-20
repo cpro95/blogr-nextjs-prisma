@@ -22,6 +22,7 @@ model Post {
 model User {
   id            Int       @id @default(autoincrement())
   name          String?
+  password      String?
   email         String?   @unique
   emailVerified DateTime? @map(name: "email_verified")
   image         String?

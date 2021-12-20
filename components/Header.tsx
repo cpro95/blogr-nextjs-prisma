@@ -85,8 +85,11 @@ const Header: React.FC = () => {
   if (!session) {
     right = (
       <div className="right">
-        <Link href="/api/auth/signin">
-          <a data-active={isActive("/signup")}>Log in</a>
+        <Link href="/signup">
+          <a>Sign up</a>
+        </Link>
+        <Link href="/login">
+          <a>Log in</a>
         </Link>
         <style jsx>{`
           a {
@@ -114,6 +117,7 @@ const Header: React.FC = () => {
   }
 
   if (session) {
+    console.log(session);
     left = (
       <div className="left">
         <Link href="/">
@@ -153,6 +157,11 @@ const Header: React.FC = () => {
         <Link href="/create">
           <button>
             <a>New post</a>
+          </button>
+        </Link>
+        <Link href="/user-profile">
+          <button>
+            <a>User Profile</a>
           </button>
         </Link>
         <button onClick={() => signOut()}>

@@ -79,7 +79,7 @@ function UserProfile() {
         <div>
           <label htmlFor="name">Name</label>
           <input
-            type="string"
+            type="text"
             id="name"
             placeholder={session?.user?.name}
             ref={nameRef}

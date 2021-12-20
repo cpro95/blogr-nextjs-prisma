@@ -80,7 +80,7 @@ const Signup: React.FC = (props) => {
       <form onSubmit={submitHandler}>
         <div>
           <label htmlFor="name">Your Name</label>
-          <input type="string" id="name" required ref={nameInputRef} />
+          <input type="text" id="name" required ref={nameInputRef} />
         </div>
         <div>
           <label htmlFor="email">Your Email</label>
